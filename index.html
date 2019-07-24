@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Geostar+Fill|Londrina+Shadow&display=swap" rel="stylesheet">
+    <title>Gemz Game</title>
+</head>
+<body>
+<h1>Crystals Collector</h1><br>
+<div id="instructions">
+        <ul>You will be given a random number at the start of the game.</ul>
+        <ul>There are four crystals Below. By clicking on a crystal, you will add a specific amount of points to your total score.</ul>
+        <ul>You win the game by matching your total score to the random number as shown below. You lose this game if your total score is above the random number.</ul>
+        <ul>The value of each crystal is hidden from you until you click on it.</ul>
+        <ul>Each time the game starts the values of each crystal will change.</ul>
+</div><br>
+<div id="numandscore">
+        <div class="row">
+        <div class="column">
+         <h1 id="ranNumb"></h1></div>
+         <div class="column">
+    <div id="scoreboard">
+        <div id="wins"> Wins: </div>
+        <div id="loss">Losses: </div>
+    </div></div>
+</div><br>
+<div id="gems">
+    <input type="image" id="gem1" src="assets/images/gem1.jpg" />
+    <input type="image" id="gem2" src="assets/images/gem2.jpg" />
+    <input type="image" id="gem3" src="assets/images/gem3.jpg" />
+    <input type="image" id="gem4" src="assets/images/gem4.jpg" />
+</div><br>
+<div id="bottom">
+<p>Total score:</p>
+<div id="score"></div></div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+<audio autoplay="true" src="assets/sounds/Better Days.mp3">
+<audio id="audio" src="assets/sounds/clicker.wav" >
+
+</body>
+</html>
