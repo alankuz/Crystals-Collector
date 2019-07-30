@@ -36,49 +36,55 @@ function gemGen() {
 
     }
 }
-$( "#gem1" ).click(function() {
-   totalScore= totalScore+gem1;
+$("#gem1").click(function () {
+    totalScore = totalScore + gem1;
     console.log(totalScore)
     $('#score').text(totalScore)
-    console.log(totalScore+ 'this' +goal)
+    console.log(totalScore + 'this' + goal)
     winCheck()
-  });
-$( "#gem2" ).click(function() {
-   totalScore= totalScore+gem2;
-    console.log(totalScore)
-    $('#score').text(totalScore)
-    winCheck()
-  });
-$( "#gem3" ).click(function() {
-   totalScore= totalScore+gem3;
+});
+$("#gem2").click(function () {
+    totalScore = totalScore + gem2;
     console.log(totalScore)
     $('#score').text(totalScore)
     winCheck()
-  });
-$( "#gem4" ).click(function() {
-   totalScore= totalScore+gem4;
+});
+$("#gem3").click(function () {
+    totalScore = totalScore + gem3;
     console.log(totalScore)
     $('#score').text(totalScore)
     winCheck()
-  });
-function winCheck(){
-if (totalScore===goal){
-win++;
-$('#wins').text('Wins: ' + win)
-reset()
-}
-if (totalScore>goal){
-losses++;
-$('#loss').text('Losses: ' + losses)
-reset()
-}
+});
+$("#gem4").click(function () {
+    totalScore = totalScore + gem4;
+    console.log(totalScore)
+    $('#score').text(totalScore)
+    winCheck()
+});
+function winCheck() {
+    if (totalScore === goal) {
+        win++;
+        $('#wins').text('Wins: ' + win)
+        $('#standing').text('You Win!')
+        reset()
+    }
+    if (totalScore > goal) {
+        losses++;
+        $('#loss').text('Losses: ' + losses)
+        $('#standing').text('You Lose!')
+        reset()
+    }
+    if (totalScore > 1) {
+        $('#standing').text('')
+
+    }
 }
 $('#wins').text('Wins: ' + win)
 $('#loss').text('Losses: ' + losses)
 
 function reset() {
-    totalScore=0;
-    gemGen() 
+    totalScore = 0;
+    gemGen()
     randNumbGen()
     $('#score').text(totalScore)
 
