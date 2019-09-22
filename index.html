@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="content">
     <h1>Crystals Collector</h1><br>
     <div id="instructions">
         <ul>You will be given a random number at the start of the game.</ul>
@@ -21,12 +22,11 @@
         <ul>The value of each crystal is hidden from you until you click on it.</ul>
         <ul>Each time the game starts the values of each crystal will change.</ul>
     </div><br>
-    <div id="numandscore">
         <div class="row">
             <div class="column">
                 <h1 id="ranNumb"></h1>
             </div>
-            <div class="column">
+            <div id="afterinformation" class="column">
                 <div id="scoreboard">
                     <div id="wins"> Wins: </div>
                     <div id="loss">Losses: </div>
@@ -34,16 +34,18 @@
 
                 </div>
             </div>
-        </div><br>
+            
+        </div>
         <div id="gems">
             <input type="image" id="gem1" src="assets/images/gem1.jpg" />
             <input type="image" id="gem2" src="assets/images/gem2.jpg" />
             <input type="image" id="gem3" src="assets/images/gem3.jpg" />
             <input type="image" id="gem4" src="assets/images/gem4.jpg" />
-        </div><br>
+        </div>
         <div id="bottom">
             <p>Total score:</p>
             <div id="score"></div>
+        </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
